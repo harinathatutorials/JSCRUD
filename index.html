@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+</head>
+<body>
+
+    <h3 class="text-center"> Javascript Crud  operations Using  Localstorage</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="text-center">Create Form</h6>
+                    </div>
+                    <div class="card-body">
+                        <form id="form">
+                            <div class="form-group" style="display: none;">
+                                <label for="name"> Id</label>
+                                <input type="text" id="id" class="form-control" placeholder="No Need to enter" disabled>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="name"> Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter  the value here">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="fname"> Father Name</label>
+                                <input type="text" id="fname" class="form-control" placeholder="Enter  the value here">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="age"> Age </label>
+                                <input type="text" id="age" class="form-control" placeholder="Enter  the value here">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phn"> Phone</label>
+                                <input type="text" id="phn" class="form-control" placeholder="Enter  the value here">
+                            </div>
+                           
+                            <button class="btn btn-primary mt-2" type="button" onclick="add()"> Add</button>
+                            <button class="btn btn-primary mt-2" type="button" onclick="clearForm()"> Clear</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="text-center">List Of users</h6>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-stripped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>SNo</th>
+                                    <th>Name</th>
+                                    <th>Father Name</th>
+                                    <th>Age</th>
+                                    <th>Phone number</th>
+                                    <th colspan="2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyContent"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/loadusers.js"></script>
+    <script src="js/add.js"></script>
+    <script src="js/remove.js"></script>
+    <script src="js/edit.js"></script>
+    <script>
+        loadUsers();
+    </script>
+</body>
+</html>
