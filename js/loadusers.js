@@ -24,3 +24,4 @@ function loadUsers() {
     tableData.innerHTML += `<tr><td colspan='6'> No Records To Display</td></tr>`;
   }
 }
+

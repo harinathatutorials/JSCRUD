@@ -23,4 +23,4 @@ function removeUser(val) {
  localStorage.setItem("users", JSON.stringify(userList));
     loadUsers();
 alert("succeffuly deleted");
-}
+} 
